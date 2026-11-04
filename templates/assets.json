@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "assets": [],
+  "requiredFields": ["id", "path", "kind", "description", "source", "rights", "qualityStatus", "usableRanges"],
+  "notes": "path 相对 assets/；视频区间记录 startSeconds、endSeconds、content、limitations。未检查的项目保留待核验，不以文件名推断事实。"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "intro-video-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "可复用的介绍视频工程：本地预览、动效组件和 MP4 导出",
+  "license": "MIT",
+  "engines": {"node": "^24.0.0 || ^26.0.0"},
+  "scripts": {
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "prestart": "npm run prepare:assets",
+    "start": "remotion studio src/index.tsx --webpack-poll=1000",
+    "render": "node scripts/render.mjs",
+    "verify": "node scripts/verify.mjs",
+    "new": "node scripts/new-project.mjs",
+    "check": "tsc --noEmit && node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.539",
+    "@remotion/cli": "4.0.539",
+    "@remotion/fonts": "4.0.539",
+    "@remotion/media": "4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "typescript": "5.9.3"
+  },
+  "overrides": {"zod": "4.6.7"},
+  "allowScripts": {"esbuild": false}
+}
